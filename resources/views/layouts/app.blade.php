@@ -8,12 +8,13 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Parambathu Kavu</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body class="bg-white">
     <div id="app">
@@ -36,8 +37,13 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a class="nav-link" href="{{ route('login') }}">Login</a></li>
-                            <li><a class="nav-link" href="{{ route('register') }}">Register</a></li>
+                            <li><a class="nav-link" href="">Gallery</a></li>
+                            <li><a class="nav-link" href="">Vazhipadu</a></li>
+                            <li><a class="nav-link" href="">News and Events</a></li>
+                            <li><a class="nav-link" href="">Poojaas</a></li>
+                            <li><a href="{{ route('showHistoryPage')}}" class="nav-link">History</a></li>
+                            {{-- <li><a class="nav-link" href="{{ route('login') }}">Login</a></li>
+                            <li><a class="nav-link" href="{{ route('register') }}">Register</a></li> --}}
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -64,7 +70,14 @@
 
         <main class="py-4">
             @yield('content')
+
+            <div class="container-fluid footer-div text-center">
+              <p class="footer-div-a">
+                <a  href="http://www.innocz.com/" target="_blank">  Made with <i class="fa fa-heart" style="color:red;"></i> by iNNOCZ</a>
+              </p>
+            </div>
         </main>
+
     </div>
 
     <!-- Scripts -->
