@@ -13,7 +13,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Parambathu Kavu</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -68,7 +68,7 @@
             </div>
             <!-- End Container fluid  -->
             <!-- footer -->
-            <footer class="footer" > © 2018 All rights reserved.<a href="https://Addoranslife.com">Addoranslife</a></footer>
+            <footer class="footer" > © 2018 All rights reserved.<a href="http://innocz.com">iNNOCZ</a></footer>
             <!-- End footer -->
         </div>
         <!-- End Page wrapper  -->

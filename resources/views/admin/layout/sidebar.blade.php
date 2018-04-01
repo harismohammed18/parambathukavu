@@ -11,10 +11,16 @@
                     <li><a href="index1.html">Analytics </a></li>
                 </ul>
             </li>
-            <li @if(isset($menu) && $menu == '1') class="active" @endif> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-building"></i><span class="hide-menu">Amenities</a>
+            <li @if(isset($menu) && $menu == '1') class="active" @endif> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-image"></i><span class="hide-menu">Gallery</a>
                 <ul aria-expanded="false" class="collapse">
-                    <li><a href=""><i class="fa fa-plus text-success"></i> Add </a></li>
-                    <li><a href=""><i class="fa fa-eye text-success"></i> View </a></li>
+                    <li><a href="{{ route('gallery.add') }}"><i class="fa fa-plus text-success"></i> Add </a></li>
+                    <li><a href="{{ route('gallery.generateForm')}}"><i class="fa fa-eye text-success"></i> View </a></li>
+                </ul>
+            </li>
+            <li @if(isset($menu) && $menu == '2') class="active" @endif> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-newspaper-o"></i><span class="hide-menu">News</a>
+                <ul aria-expanded="false" class="collapse">
+                    <li><a href="{{ route('gallery.add') }}"><i class="fa fa-plus text-success"></i> Add </a></li>
+                    <li><a href="{{ route('gallery.generateForm')}}"><i class="fa fa-eye text-success"></i> View </a></li>
                 </ul>
             </li>
 
