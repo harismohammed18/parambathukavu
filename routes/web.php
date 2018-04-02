@@ -65,3 +65,17 @@ Route::get('vazhipadu/edit/{id}','VazhipaduController@showEditForm');
 Route::post('/vazhipadu/update','VazhipaduController@update')->name('vazhipadu.update');
 //6 : to delete selected vazhipadu
 Route::get('/vazhipadu/remove/{id}','VazhipaduController@remove');
+
+//poojas
+//1 : to show add pooja add form
+Route::get('/pooja/add','PoojaController@index')->name('pooja.add');
+//2 : to save pooja
+Route::post('/pooja/save','PoojaController@store')->name('pooja.save');
+//3 to view all available poojas
+Route::get('/pooja/showAll','PoojaController@show')->name('pooja.viewAll');
+//4 : to show edit form for selected pooja
+Route::get('pooja/edit/{id}','PoojaController@edit');
+//5 : to save edited pooja
+Route::post('/pooja/update','PoojaController@update')->name('pooja.update');
+//6 : to delete selected pooja
+Route::get('/pooja/remove/{id}','PoojaController@destroy');
