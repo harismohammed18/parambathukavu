@@ -43,7 +43,7 @@
         "link": function(locale, options) {
             var size = (options && options.size) ? ' btn-'+options.size : '';
             return "<li>" +
-              "<div class='bootstrap-wysihtml5-insert-link-modal modal fade bs-example-modal-lg'>" +
+              "<div class='bootstrap-wysihtml5-insert-link-modal modal  bs-example-modal-lg'>" +
                 "<div class='modal-dialog modal-lg'>" +
 					"<div class='modal-content'>" +
 				"<div class='modal-header'>" +
@@ -69,7 +69,7 @@
         "image": function(locale, options) {
             var size = (options && options.size) ? ' btn-'+options.size : '';
             return "<li>" +
-              "<div class='bootstrap-wysihtml5-insert-image-modal modal fade bs-example-modal-lg'>" +
+              "<div class='bootstrap-wysihtml5-insert-image-modal modal  bs-example-modal-lg'>" +
                 "<div class='modal-dialog modal-lg'>" +
 					"<div class='modal-content'>" +
 				"<div class='modal-header'>" +
@@ -95,7 +95,7 @@
         "html": function(locale, options) {
             var size = (options && options.size) ? ' btn-'+options.size : '';
             return "<li>" +
-              "<div class='btn-group'>" + 
+              "<div class='btn-group'>" +
                 "<a class='btn" + size + "' data-wysihtml5-action='change_view' title='" + locale.html.edit + "'><i class='fa fa-pencil'></i></a>" +
               "</div>" +
             "</li>";
@@ -366,7 +366,7 @@
             return methods.init.apply( this, arguments );
         } else {
             $.error( 'Method ' +  method + ' does not exist on jQuery.wysihtml5' );
-        }    
+        }
     };
 
     $.fn.wysihtml5.Constructor = Wysihtml5;

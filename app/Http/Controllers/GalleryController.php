@@ -35,7 +35,7 @@ class GalleryController extends Controller
      'file' => 'required|mimetypes:image/*',
      ]);
      if($request->hasFile('file')){
-       $filename=time().'.'.$request->file('file')->getClientOriginalName().'.'.date('Y-M-D H-i-s').'.'.$request->file('file')->getClientOriginalExtension();
+       $filename='parambathukavu-'.time().'.'.$request->file('file')->getClientOriginalName().'.'.$request->file('file')->getClientOriginalExtension();
        $request->file('file')->move(public_path('galleryImages'), $filename);
        $image = new GalleryImages;
        $image->imageName = $filename;
