@@ -23,7 +23,7 @@
               <div class="form-group">
                 <label>About</label>
                 {{-- <textarea class="form-control {{ $errors->has('about') ? ' is-invalid' : '' }} " rows="10"  required name="about" id="about"  /></textarea> --}}
-                <textarea class="textarea_editor form-control" name="about" rows="10" placeholder="News" required style="height:450px">{{ $pooja->about }}</textarea>
+                <textarea class="textarea_editor form-control" name="about" rows="10" placeholder="About" required style="height:450px">{{ $pooja->about }}</textarea>
                 @if ($errors->has('about'))
                     <span class="invalid-feedback">
                         <strong>{{ $errors->first('about') }}</strong>

@@ -35,6 +35,12 @@
                   <li><a href="{{ route('pooja.viewAll')}}"><i class="fa fa-eye text-success"></i> View </a></li>
               </ul>
             </li>
+            <li @if(isset($menu) && $menu == '5') class="active" @endif > <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Festivals </span></a>
+              <ul aria-expanded="false" class="collapse">
+                  <li><a href="{{ route('festival.add') }}"><i class="fa fa-plus text-success"></i> Add </a></li>
+                  <li><a href="{{ route('festival.viewAll')}}"><i class="fa fa-eye text-success"></i> View </a></li>
+              </ul>
+            </li>
         </ul>
     </nav>
     <!-- End Sidebar navigation -->

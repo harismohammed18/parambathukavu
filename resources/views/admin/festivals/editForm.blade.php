@@ -5,40 +5,36 @@
     <div class="col-md-11 offset-1 ">
       <div class="card">
         <div class="card-block">
-          <h4 class="card-title text-center"><b>Poojaas</b></h4>
-          <form method="post" action="{{ route('pooja.save') }}" enctype="multipart/form-data" >
-            @csrf
-            <div class="form-group">
-              <label>Pooja Name</label>
-              <input type="text" class="form-control {{ $errors->has('poojaName') ? ' is-invalid' : '' }}" name="poojaName" id="poojaName" placeholder="Pooja Name" required onfocusout="capitalize(this.id)" />
-              @if ($errors->has('poojaName'))
-                  <span class="invalid-feedback">
-                      <strong>{{ $errors->first('poojaName') }}</strong>
-                  </span>
-              @endif
-            </div>
+          <h4 class="card-title text-center"><b>Festival</b></h4>
+          @if (isset($fest))
+            <form method="post" action="{{ route('festival.update') }}" enctype="multipart/form-data" >
+              <input type="hidden" name="id" value="{{ $fest->id }}" />
+              @csrf
+              <div class="form-group">
+                <label> Name</label>
+                <input type="text" class="form-control {{ $errors->has('festName') ? ' is-invalid' : '' }}" name="festName" id="festName" placeholder=" Name" required onfocusout="capitalize(this.id)" value="{{ $fest->name }}" />
+                @if ($errors->has('festName'))
+                    <span class="invalid-feedback">
+                        <strong>{{ $errors->first('festName') }}</strong>
+                    </span>
+                @endif
+              </div>
 
-            <div class="form-group">
-              <label>About</label>
-              {{-- <textarea class="form-control {{ $errors->has('about') ? ' is-invalid' : '' }} " rows="10"  required name="about" id="about"  /></textarea> --}}
-              <textarea class="textarea_editor form-control" name="about" rows="10" placeholder="About" required style="height:450px"></textarea>
-              @if ($errors->has('about'))
-                  <span class="invalid-feedback">
-                      <strong>{{ $errors->first('about') }}</strong>
-                  </span>
-              @endif
-            </div>
-            <div class="form-group">
-              <label>Picture</label>
-              <input type="file" class="form-control {{ $errors->has('picture') ? ' is-invalid' : '' }}" required name="picture" id="picture" placeholder="News Image" accept="image/*"  />
-              @if ($errors->has('picture'))
-                  <span class="invalid-feedback">
-                      <strong>{{ $errors->first('picture') }}</strong>
-                  </span>
-              @endif
-            </div>
-            <button class="btn btn-primary">Save</button>
-          </form>
+              <div class="form-group">
+                <label>About</label>
+                {{-- <textarea class="form-control {{ $errors->has('about') ? ' is-invalid' : '' }} " rows="10"  required name="about" id="about"  /></textarea> --}}
+                <textarea class="textarea_editor form-control" name="about" rows="10" placeholder="About" required style="height:450px">{{ $fest->about }}</textarea>
+                @if ($errors->has('about'))
+                    <span class="invalid-feedback">
+                        <strong>{{ $errors->first('about') }}</strong>
+                    </span>
+                @endif
+              </div>
+              <button class="btn btn-primary">Save</button>
+            </form>
+          @else
+            <h4>Invalid Selection </h4>
+          @endif
         </div>
       </div>
     </div>

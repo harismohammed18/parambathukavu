@@ -79,3 +79,17 @@ Route::get('pooja/edit/{id}','PoojaController@edit');
 Route::post('/pooja/update','PoojaController@update')->name('pooja.update');
 //6 : to delete selected pooja
 Route::get('/pooja/remove/{id}','PoojaController@destroy');
+
+//festival
+//1 : to show add pooja add form
+Route::get('/festival/add','FestivalController@index')->name('festival.add');
+//2 : to save festival
+Route::post('/festival/save','FestivalController@store')->name('festival.save');
+//3 to view all available festivals
+Route::get('/festival/showAll','FestivalController@show')->name('festival.viewAll');
+//4 : to show edit form for selected festival
+Route::get('festival/edit/{id}','FestivalController@edit');
+//5 : to save edited festival
+Route::post('/festival/update','FestivalController@update')->name('festival.update');
+//6 : to delete selected festival
+Route::get('/festival/remove/{id}','FestivalController@destroy');

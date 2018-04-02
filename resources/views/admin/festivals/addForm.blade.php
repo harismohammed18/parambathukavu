@@ -5,15 +5,15 @@
     <div class="col-md-11 offset-1 ">
       <div class="card">
         <div class="card-block">
-          <h4 class="card-title text-center"><b>Poojaas</b></h4>
-          <form method="post" action="{{ route('pooja.save') }}" enctype="multipart/form-data" >
+          <h4 class="card-title text-center"><b>Festival</b></h4>
+          <form method="post" action="{{ route('festival.save') }}" enctype="multipart/form-data" >
             @csrf
             <div class="form-group">
-              <label>Pooja Name</label>
-              <input type="text" class="form-control {{ $errors->has('poojaName') ? ' is-invalid' : '' }}" name="poojaName" id="poojaName" placeholder="Pooja Name" required onfocusout="capitalize(this.id)" />
-              @if ($errors->has('poojaName'))
+              <label> Name</label>
+              <input type="text" class="form-control {{ $errors->has('festName') ? ' is-invalid' : '' }}" name="festName" id="festName" placeholder=" Name" required onfocusout="capitalize(this.id)" />
+              @if ($errors->has('festName'))
                   <span class="invalid-feedback">
-                      <strong>{{ $errors->first('poojaName') }}</strong>
+                      <strong>{{ $errors->first('festName') }}</strong>
                   </span>
               @endif
             </div>
