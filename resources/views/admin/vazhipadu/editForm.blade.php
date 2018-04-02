@@ -5,45 +5,44 @@
     <div class="col-md-11 offset-1 ">
       <div class="card">
         <div class="card-block">
-          <h4 class="card-title text-center"><b>News </b></h4>
-          @if(isset($news))
-            <form method="post" action="{{ route('news.update') }}" >
-              @csrf
-              <input type="hidden" name="id" value="{{ $news->id }}" />
-              <div class="form-group">
-                <label>News Title</label>
-                <input type="text" class="form-control {{ $errors->has('newsTitle') ? ' is-invalid' : '' }}" name="newsTitle" id="newsTitle" placeholder="News Title" required onfocusout="capitalize(this.id)" value="{{ $news->title }}" />
-                @if ($errors->has('newsTitle'))
-                    <span class="invalid-feedback">
-                        <strong>{{ $errors->first('newsTitle') }}</strong>
-                    </span>
-                @endif
-              </div>
-              <div class="form-group">
-                <label>News Date</label>
-                <input type="Date" class="form-control {{ $errors->has('newsDate') ? ' is-invalid' : '' }}" required name="newsDate" id="newsDate" placeholder="News Date" value="{{ $news->date }}"  />
-                @if ($errors->has('newsDate'))
-                    <span class="invalid-feedback">
-                        <strong>{{ $errors->first('newsDate') }}</strong>
-                    </span>
-                @endif
-              </div>
-              <div class="form-group">
-                <label>News </label>
-                {{-- <textarea class="form-control {{ $errors->has('newsText') ? ' is-invalid' : '' }} " rows="10"  required name="newsText" id="newsText"  /></textarea> --}}
-                <textarea class="textarea_editor form-control" name="newsText" rows="10" placeholder="News" required style="height:450px">{{ $news->news }}</textarea>
-                @if ($errors->has('newsText'))
-                    <span class="invalid-feedback">
-                        <strong>{{ $errors->first('newsText') }}</strong>
-                    </span>
-                @endif
-              </div>
+          <h4 class="card-title text-center"><b>Vazhipadu</b></h4>
+        @if (isset($vazhipadu))
+          <form method="post" action="{{ route('vazhipadu.update') }}" enctype="multipart/form-data" >
+            @csrf
+            <input type="hidden" name="id" value="{{ $vazhipadu->id }}" />
+            <div class="form-group">
+              <label>Vazhipadu Name</label>
+              <input type="text" class="form-control {{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" id="name" placeholder="Vazhipadu Name" required onfocusout="capitalize(this.id)" value="{{ $vazhipadu->name }}" />
+              @if ($errors->has('name'))
+                  <span class="invalid-feedback">
+                      <strong>{{ $errors->first('name') }}</strong>
+                  </span>
+              @endif
+            </div>
+            <div class="form-group">
+              <label>Vazhipadu Price</label>
+              <input type="number" class="form-control {{ $errors->has('price') ? ' is-invalid' : '' }}" required name="price" id="price" placeholder="Vazhipadu Price" value="{{ $vazhipadu->price }}" />
+              @if ($errors->has('price'))
+                  <span class="invalid-feedback">
+                      <strong>{{ $errors->first('price') }}</strong>
+                  </span>
+              @endif
+            </div>
+            <div class="form-group">
+              <label>About </label>
+              <textarea class="textarea_editor form-control" name="aim" rows="10" placeholder="About" required style="height:450px">{{ $vazhipadu->aim }}</textarea>
+              @if ($errors->has('newsText'))
+                  <span class="invalid-feedback">
+                      <strong>{{ $errors->first('newsText') }}</strong>
+                  </span>
+              @endif
+            </div>
 
-              <button class="btn btn-primary">Save</button>
-            </form>
-          @else
-            Invalid News
-          @endif
+            <button class="btn btn-primary">Save</button>
+          </form>
+        @else
+          <h4>Invalid Selection</h4>
+        @endif
         </div>
       </div>
     </div>

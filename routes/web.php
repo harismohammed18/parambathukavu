@@ -51,3 +51,17 @@ Route::get('/news/edit/{id}','NewsController@editForm');
 Route::post('/news/update','NewsController@updateNews')->name('news.update');
 //6 : to delete selected news
 Route::get('/news/remove/{id}','NewsController@delete');
+
+//vazhipadu
+//1 : to show add vazhipadu add form
+Route::get('/vazhipadu/add','VazhipaduController@showAddForm')->name('vazhipadu.add');
+//2 : to save vazhipadu
+Route::post('/vazhipadu/save','VazhipaduController@save')->name('vazhipadu.save');
+//3 to view all available vazhipadus
+Route::get('/vazhipadu/showAll','VazhipaduController@viewAll')->name('vazhipadu.viewAll');
+//4 : to show edit form for selected vazhipadu
+Route::get('vazhipadu/edit/{id}','VazhipaduController@showEditForm');
+//5 : to save edited vazhipadu
+Route::post('/vazhipadu/update','VazhipaduController@update')->name('vazhipadu.update');
+//6 : to delete selected vazhipadu
+Route::get('/vazhipadu/remove/{id}','VazhipaduController@remove');

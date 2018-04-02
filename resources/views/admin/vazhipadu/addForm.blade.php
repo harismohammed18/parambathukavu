@@ -5,46 +5,37 @@
     <div class="col-md-11 offset-1 ">
       <div class="card">
         <div class="card-block">
-          <h4 class="card-title text-center"><b>News</b></h4>
-          <form method="post" action="{{ route('news.save') }}" enctype="multipart/form-data" >
+          <h4 class="card-title text-center"><b>Vazhipadu</b></h4>
+          <form method="post" action="{{ route('vazhipadu.save') }}" enctype="multipart/form-data" >
             @csrf
             <div class="form-group">
-              <label>News Title</label>
-              <input type="text" class="form-control {{ $errors->has('newsTitle') ? ' is-invalid' : '' }}" name="newsTitle" id="newsTitle" placeholder="News Title" required onfocusout="capitalize(this.id)" />
-              @if ($errors->has('newsTitle'))
+              <label>Vazhipadu Name</label>
+              <input type="text" class="form-control {{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" id="name" placeholder="Vazhipadu Name" required onfocusout="capitalize(this.id)" />
+              @if ($errors->has('name'))
                   <span class="invalid-feedback">
-                      <strong>{{ $errors->first('newsTitle') }}</strong>
+                      <strong>{{ $errors->first('name') }}</strong>
                   </span>
               @endif
             </div>
             <div class="form-group">
-              <label>News Date</label>
-              <input type="Date" class="form-control {{ $errors->has('newsDate') ? ' is-invalid' : '' }}" required name="newsDate" id="newsDate" placeholder="News Date"  />
-              @if ($errors->has('newsDate'))
+              <label>Vazhipadu Price</label>
+              <input type="number" class="form-control {{ $errors->has('price') ? ' is-invalid' : '' }}" required name="price" id="price" placeholder="Vazhipadu Price"  />
+              @if ($errors->has('price'))
                   <span class="invalid-feedback">
-                      <strong>{{ $errors->first('newsDate') }}</strong>
+                      <strong>{{ $errors->first('price') }}</strong>
                   </span>
               @endif
             </div>
             <div class="form-group">
-              <label>News </label>
-              {{-- <textarea class="form-control {{ $errors->has('newsText') ? ' is-invalid' : '' }} " rows="10"  required name="newsText" id="newsText"  /></textarea> --}}
-              <textarea class="textarea_editor form-control" name="newsText" rows="10" placeholder="News" required style="height:450px"></textarea>
+              <label>About </label>
+              <textarea class="textarea_editor form-control" name="aim" rows="10" placeholder="About" required style="height:450px"></textarea>
               @if ($errors->has('newsText'))
                   <span class="invalid-feedback">
                       <strong>{{ $errors->first('newsText') }}</strong>
                   </span>
               @endif
             </div>
-            <div class="form-group">
-              <label>Picture</label>
-              <input type="file" class="form-control {{ $errors->has('newsImage') ? ' is-invalid' : '' }}" required name="newsImage" id="newsImage" placeholder="News Image" accept="image/*"  />
-              @if ($errors->has('newsImage'))
-                  <span class="invalid-feedback">
-                      <strong>{{ $errors->first('newsImage') }}</strong>
-                  </span>
-              @endif
-            </div>
+
             <button class="btn btn-primary">Save</button>
           </form>
         </div>
