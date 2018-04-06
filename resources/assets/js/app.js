@@ -28,7 +28,7 @@ Vue.use(VModal);
  */
 
 Vue.component('gallery-component', require('./components/Gallery.vue'));
-
+Vue.component('gallery', require('./components/Galleryopen.vue'));
 const app = new Vue({
     el: '#app'
 });

@@ -36,7 +36,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        <li><a class="nav-link" href="">Gallery</a></li>
+                        <li><a class="nav-link" href="{{ route('showGalleryGeneratePage') }}">Gallery</a></li>
                         <li><a class="nav-link" href="">Vazhipadu</a></li>
                         <li><a class="nav-link" href="">News</a></li>
                         <li><a class="nav-link" href="">Poojaas</a></li>
@@ -79,5 +79,6 @@
           }, 500);
       });
     </script>
+    @yield('script')
 </body>
 </html>

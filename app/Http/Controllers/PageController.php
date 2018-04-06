@@ -11,4 +11,9 @@ class PageController extends Controller
     {
       return view('pages.history');
     }
+    //function to generate gallery
+    public function showGalleryPage()
+    {
+      return view('pages.gallery');
+    }
 }

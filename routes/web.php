@@ -18,7 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//to show history page
 Route::get('history','PageController@showHistoryPage')->name('showHistoryPage');
+//to show gallery generate page
+Route::get('gallery','PageController@showGalleryPage')->name('showGalleryGeneratePage');
 
 //admin
 //Gallery
