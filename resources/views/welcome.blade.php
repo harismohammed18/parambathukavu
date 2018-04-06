@@ -9,6 +9,22 @@
           The best place for worship for Hindu Сommunity.Let your mind grow deeper and more enriched.Amazing bridge between the divine and mankind...
       </p>
     </div>
+    <div class="col-md-12 bg-brown" >
+      <div class="row">
+        <div class="col">
+          <label class="timingHeading text-warning"><big><i class="fa fa-clock-o "></i></big> Darsan Times</label>
+        </div>
+        <div class="col">
+          <label class="timing">  8.00 AM to 1.00 PM <big><strong>|</strong></big> 5.00 PM to 6.00 PM </label>
+        </div>
+        <div class="col">
+          <label class="timingHeading text-warning"><big><i class="fa fa-clock-o "></i></big> Vazhipadu Counter Timings</label>
+        </div>
+        <div class="col">
+            <label class="timing">9.00 AM to 1.00 PM </label>
+        </div>
+      </div>
+    </div>
     <div class="margin-adjust">
       <div class="col-sm-12 ">
         <div class="card-deck-wrapper">
@@ -37,7 +53,7 @@
     </div>
   </div>
   <div class="col-sm-12 text-center up-div">
-    <h1 class="up-h1">News &#38; Events</h1>
+    <h1 class="up-h1">News</h1>
   </div>
   <div class="container">
     <div class="row margin-top-20-event">

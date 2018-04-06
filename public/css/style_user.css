@@ -220,3 +220,19 @@ img.lazy{
   font-family: 'meeraregular';
   font-size: 20px;
 }
+.bg-brown{
+  background-color: rgb(122, 1, 1);
+  height:auto;
+  margin-top: -20px;
+  color:#fff;
+}
+.timing{
+  margin-top: 10px;
+}
+.timingHeading{
+  margin-top: 6px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  font-size: 15px;
+  color:#fff;
+}
