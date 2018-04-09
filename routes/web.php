@@ -22,6 +22,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('history','PageController@showHistoryPage')->name('showHistoryPage');
 //to show gallery generate page
 Route::get('gallery','PageController@showGalleryPage')->name('showGalleryGeneratePage');
+//to get gallery name
+Route::post('getGalleryNames','PageController@getGalleryNames');
+//to get images for selected gallery
+Route::post('getGalleryImages/{id}','PageController@getGalleryImagesForSelectedGallery');
 
 //admin
 //Gallery
