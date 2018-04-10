@@ -26,6 +26,12 @@ Route::get('gallery','PageController@showGalleryPage')->name('showGalleryGenerat
 Route::post('getGalleryNames','PageController@getGalleryNames');
 //to get images for selected gallery
 Route::post('getGalleryImages/{id}','PageController@getGalleryImagesForSelectedGallery');
+//to show news page
+Route::get('showNewsPage','PageController@showNewsPage')->name('showNewsPage');
+//detailed view of news
+Route::get('/newsOpen/{id}','PageController@detailedNews');
+//route to add vazhipadu page
+Route::get('vazhipaduPage','PageController@showVazhipaduPage')->name('showVazhipaduPage');
 
 //admin
 //Gallery
