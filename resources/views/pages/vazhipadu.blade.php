@@ -10,4 +10,7 @@
       </p>
     </div>
   </div>
+  <div>
+    <vazhipadu></vazhipadu>
+  </div>
 @endsection

@@ -29,6 +29,7 @@ Vue.use(VModal);
 
 Vue.component('gallery-component', require('./components/Gallery.vue'));
 Vue.component('gallery', require('./components/Galleryopen.vue'));
+Vue.component('vazhipadu', require('./components/Vazhipadu.vue'));
 const app = new Vue({
     el: '#app'
 });
