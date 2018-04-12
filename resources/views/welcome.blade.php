@@ -1,30 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-  <a href="javascript:" id="return-to-top"><i class="oi oi-caret-top"></i></a>
-  <div class="bg-gray">
-    <div class="parallax">
-      <h1 class="text-center main-heading">ശ്രീ പറമ്പത്ത് കാവ്   ഭഗവതീക്ഷേത്രം </h1>
-      <p class="main-text text-center">
-          The best place for worship for Hindu Сommunity.Let your mind grow deeper and more enriched.Amazing bridge between the divine and mankind...
-      </p>
-    </div>
-    <div class="col-md-12 bg-brown" >
-      <div class="row">
-        <div class="col">
-          <label class="timingHeading text-warning"><big><i class="fa fa-clock-o "></i></big> Darsan Times</label>
-        </div>
-        <div class="col">
-          <label class="timing">  8.00 AM to 1.00 PM <big><strong>|</strong></big> 5.00 PM to 6.00 PM </label>
-        </div>
-        <div class="col">
-          <label class="timingHeading text-warning"><big><i class="fa fa-clock-o "></i></big> Vazhipadu Counter Timings</label>
-        </div>
-        <div class="col">
-            <label class="timing">9.00 AM to 1.00 PM </label>
-        </div>
-      </div>
-    </div>
     <div class="margin-adjust">
       <div class="col-sm-12 ">
         <div class="card-deck-wrapper">
