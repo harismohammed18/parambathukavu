@@ -39,7 +39,7 @@
                         <li><a class="nav-link" href="{{ route('showGalleryGeneratePage') }}">Gallery</a></li>
                         <li><a class="nav-link" href="{{ route('showVazhipaduPage') }}">Vazhipadu</a></li>
                         <li><a class="nav-link" href="{{ route('showNewsPage') }}">News</a></li>
-                        <li><a class="nav-link" href="">Poojaas</a></li>
+                        <li><a class="nav-link" href="{{ route('showPoojaas') }}">Poojaas</a></li>
                         <li><a href="{{ route('showHistoryPage')}}" class="nav-link">History</a></li>
                     </ul>
                 </div>

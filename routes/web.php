@@ -32,6 +32,12 @@ Route::get('showNewsPage','PageController@showNewsPage')->name('showNewsPage');
 Route::get('/newsOpen/{id}','PageController@detailedNews');
 //route to add vazhipadu page
 Route::get('vazhipaduPage','PageController@showVazhipaduPage')->name('showVazhipaduPage');
+//show all Vazhipadu Details
+Route::post('getVazhipade','PageController@getAllVazhipadu');
+//details of selected vazhipadu
+Route::post('/getVazhipadeDetails/{id}','PageController@getVazhipaduDetails');
+//show poojaas page
+Route::get('/showPoojaas','PageController@showPoojaas')->name('showPoojaas');
 
 //admin
 //Gallery

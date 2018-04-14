@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\GalleryName;
 use App\News;
+use App\Vazhipadu;
 
 class PageController extends Controller
 {
@@ -45,4 +46,19 @@ class PageController extends Controller
     {
       return view('pages.vazhipadu');
     }
+    //to show all vazhipadu namespace
+    public function getAllVazhipadu()
+    {
+      return Vazhipadu::select('id','name','price')->get();
+    }
+    //to view details of selected vazhipadu
+    public function getVazhipaduDetails($id)
+    {
+      return Vazhipadu::find($id);
+    }
+    public function showPoojaas()
+    {
+      return view('pages.poojaas');
+    }
+
 }
