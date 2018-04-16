@@ -6,9 +6,16 @@ use Illuminate\Http\Request;
 use App\GalleryName;
 use App\News;
 use App\Vazhipadu;
+use App\Poojaas;
 
 class PageController extends Controller
 {
+    //function to show welcome page
+    public function showWelcomePage()
+    {
+      $news = News::latest()->take(3)->get();
+      return view('welcome',['news' => $news]);
+    }
     //function to view history page
     public function showHistoryPage()
     {
@@ -56,9 +63,20 @@ class PageController extends Controller
     {
       return Vazhipadu::find($id);
     }
+    //show all poojaas page
     public function showPoojaas()
     {
       return view('pages.poojaas');
+    }
+    //details of all poojaas
+    public function getPoojaas()
+    {
+      return Poojaas::select('name','id','image')->get();
+    }
+    //details of selected pooja
+    public function getPoojaDetails($id)
+    {
+      return Poojaas::find($id);
     }
 
 }

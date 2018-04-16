@@ -33,45 +33,26 @@
   </div>
   <div class="container">
     <div class="row margin-top-20-event">
-      <div class="col-sm-4 margin-top-5">
-        <div class="card">
-          <div class="card-title text-center">
-            <h3 class="event-name">Event Name</h3>
-            <h4 class="event-date">19-Jan-2018</h4>
+      @if(isset($news) && $news->count() > 0)
+        @foreach ($news as $value)
+          <div class="col-sm-4 margin-top-5">
+            <div class="card">
+              <div class="card-title text-center">
+                <h3 class="event-name">{{$value->title}}</h3>
+                <h4 class="event-date">@php $date=date_create($value->date); @endphp {{ date_format($date,"d/M/Y ")}}</h4>
+              </div>
+              <div class="card-body event-line">
+                <p class="text-justify">
+                @php $news=substr($value->news,0,100); @endphp  {!! $news !!}...
+                </p>
+                <a class="btn btn-info" href="{{ url('/newsOpen').'/'.$value->id }}">View Details</a>
+              </div>
+            </div>
           </div>
-          <div class="card-body event-line">
-            <p class="text-justify">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4 margin-top-5">
-        <div class="card">
-          <div class="card-title text-center">
-            <h3 class="event-name">Event Name</h3>
-            <h4 class="event-date">19-Jan-2018</h4>
-          </div>
-          <div class="card-body event-line">
-            <p class="text-justify">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4 margin-top-5">
-        <div class="card">
-          <div class="card-title text-center">
-            <h3 class="event-name">Event Name</h3>
-            <h4 class="event-date">19-Jan-2018</h4>
-          </div>
-          <div class="card-body event-line">
-            <p class="text-justify">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-            </p>
-          </div>
-        </div>
-      </div>
+        @endforeach
+      @else
+        <h4 class="text-danger"> No News</h4>
+      @endif
     </div>
   </div>
   <div class="parallaxQuote">

@@ -6,14 +6,14 @@
           <table class="table  table-hover text-center" style="width:100%;">
             <thead>
               <tr>
-                <th> Vazhipadu Name </th>
-                <th>Unit Price</th>
+                <th>  Name </th>
+                <th></th>
               </tr>
             </thead>
             <tbody class="mouse-hand">
-              <tr  v-for="vazhipadus in vazhipadu" @click="getDetails(vazhipadus.id)">
-                <td>{{vazhipadus.name}}</td>
-                <td><i class="fa fa-inr"></i> &nbsp;{{vazhipadus.price}}</td>
+              <tr  v-for="poojaass in poojaas" @click="getDetails(poojaass.id)">
+                <td>{{poojaass.name}}</td>
+                <td><img :src="'/poojaasImage/'+poojaass.image" alt="" class="img-thumbnail " style="width:50px;height:50px;"></td>
               </tr>
             </tbody>
           </table>
@@ -33,7 +33,10 @@
               </button>
             </div>
             <div class="modal-body text-justify">
-              <p v-html="details.aim"></p>
+              <p class="text-center">
+                <img :src="'/poojaasImage/'+details.image" alt="" class="img-thumbnail ">
+              </p>
+              <p v-html="details.about"></p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -48,14 +51,14 @@
 export default{
   data(){
     return{
-      vazhipadu:'',
+      poojaas:'',
       loading:false,
       details:'',
     }
   },
   mounted(){
-    axios.post('/getVazhipade').then((response)=>{
-      this.vazhipadu=response.data;
+    axios.post('/getPoojaas').then((response)=>{
+      this.poojaas=response.data;
     }).catch((error)=>{
       alert("No network! Please try again !!");
     })
@@ -64,13 +67,14 @@ export default{
     getDetails:function(id){
       $('#modal-1').modal('show');
       this.loading = true;
-      axios.post('/getVazhipadeDetails/'+id).then((response)=>{
+      axios.post('/getPoojaDetails/'+id).then((response)=>{
         this.loading = false;
         this.details=response.data;
       }).catch((error)=>{
         this.loading = false;
         this.details='';
         alert("No network! Please try again !!");
+        $('#modal-1').modal('hide');
       })
     }
   }

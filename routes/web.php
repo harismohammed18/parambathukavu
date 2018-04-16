@@ -11,10 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
+Route::get('/','PageController@showWelcomePage');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -38,6 +36,10 @@ Route::post('getVazhipade','PageController@getAllVazhipadu');
 Route::post('/getVazhipadeDetails/{id}','PageController@getVazhipaduDetails');
 //show poojaas page
 Route::get('/showPoojaas','PageController@showPoojaas')->name('showPoojaas');
+//get all poojaas
+Route::post('/getPoojaas','PageController@getPoojaas');
+//get details of selected poojaas
+Route::post('/getPoojaDetails/{id}','PageController@getPoojaDetails');
 
 //admin
 //Gallery

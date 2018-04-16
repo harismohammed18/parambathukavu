@@ -71,6 +71,7 @@ export default{
         this.loading = false;
         this.details='';
         alert("No network! Please try again !!");
+        $('#modal-1').modal('hide');
       })
     }
   }

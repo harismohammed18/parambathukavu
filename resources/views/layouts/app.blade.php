@@ -55,19 +55,19 @@
                   The best place for worship for Hindu Сommunity.Let your mind grow deeper and more enriched.Amazing bridge between the divine and mankind...
               </p>
             </div>
-            <div class="col-md-12 bg-brown" >
+            <div class="col-md-12 col-sm-12  bg-brown" >
               <div class="row">
-                <div class="col">
-                  <label class="timingHeading text-warning"><big><i class="fa fa-clock-o "></i></big> Darsan Times</label>
+                <div class="col-sm-3 col-md-3 col-xs-3 col-lg-3">
+                  <label class="timingHeading text-warning"><big><i class="fa fa-clock-o "></i></big>Darsan Times</label>
                 </div>
-                <div class="col">
-                  <label class="timing">  8.00 AM to 1.00 PM <big><strong>|</strong></big> 5.00 PM to 6.00 PM </label>
+                <div class="col-sm-3 col-md-3 col-xs-3 col-lg-3">
+                  <label class="timing">  8.00 AM to 1.00 PM <big><strong>|</strong></big> 5.00 PM to 6.00 PM</label>
                 </div>
-                <div class="col">
-                  <label class="timingHeading text-warning"><big><i class="fa fa-clock-o "></i></big> Vazhipadu Counter Timings</label>
+                <div class="col-sm-3 col-md-3 col-xs-3 col-lg-3">
+                  <label class="timingHeading text-warning"><big><i class="fa fa-clock-o "></i></big>Vazhipadu Counter Timings</label>
                 </div>
-                <div class="col">
-                    <label class="timing">9.00 AM to 1.00 PM </label>
+                <div class="col-sm-3 col-md-3 col-xs-3 col-lg-3">
+                    <label class="timing">9.00 AM to 1.00 PM</label>
                 </div>
               </div>
             </div>
